@@ -30,17 +30,17 @@ function! s:init()
       let palette = g:airline#themes#{g:airline_theme}#palette
     catch
       call airline#util#warning(printf('Could not resolve airline theme "%s". Themes have been migrated to github.com/vim-airline/vim-airline-themes.', g:airline_theme))
-      let g:airline_theme = 'dark'
+      let g:airline_theme = 'powerlineish'
     endtry
     try
       silent call airline#switch_theme(g:airline_theme)
     catch
       call airline#util#warning(printf('Could not find airline theme "%s".', g:airline_theme))
-      let g:airline_theme = 'dark'
+      let g:airline_theme = 'powerlineish'
       silent call airline#switch_theme(g:airline_theme)
     endtry
   else
-    let g:airline_theme = 'dark'
+    let g:airline_theme = 'powerlineish'
     silent call s:on_colorscheme_changed()
   endif
 
